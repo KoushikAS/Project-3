@@ -1,5 +1,5 @@
 Flow report for regfile
-Tue Oct 11 20:41:33 2022
+Wed Oct 12 11:43:52 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 11 20:41:33 2022       ;
+; Flow Status                        ; Successful - Wed Oct 12 11:43:52 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; regfile                                     ;
 ; Top-level Entity Name              ; regfile                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 0 / 114,480 ( 0 % )                         ;
-;     Total combinational functions  ; 0 / 114,480 ( 0 % )                         ;
-;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 1,424 / 114,480 ( 1 % )                     ;
+;     Total combinational functions  ; 1,424 / 114,480 ( 1 % )                     ;
+;     Dedicated logic registers      ; 1,024 / 114,480 ( < 1 % )                   ;
+; Total registers                    ; 1024                                        ;
 ; Total pins                         ; 114 / 529 ( 22 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/11/2022 20:40:52 ;
+; Start date & time ; 10/12/2022 11:35:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; regfile             ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 345050840390.166553525107284           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 345050840390.166558893904280           ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -86,6 +86,8 @@ agreement for further details.
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
@@ -95,12 +97,16 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4722 MB             ; 00:00:21                           ;
-; Fitter                    ; 00:00:14     ; 1.0                     ; 5367 MB             ; 00:00:17                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4675 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4806 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:46                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 4741 MB             ; 00:00:23                           ;
+; Fitter                    ; 00:00:20     ; 1.0                     ; 5416 MB             ; 00:00:23                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4682 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.1                     ; 4826 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4664 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:49     ; --                      ; --                  ; 00:01:00                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,6 +120,10 @@ agreement for further details.
 ; Assembler                 ; vcm-28338        ; Windows 10 ; 10.0       ; x86_64         ;
 ; TimeQuest Timing Analyzer ; vcm-28338        ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer        ; vcm-28338        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; vcm-28338        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; vcm-28338        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; vcm-28338        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; vcm-28338        ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
@@ -125,6 +135,10 @@ quartus_fit --read_settings_files=off --write_settings_files=off regfile -c regf
 quartus_asm --read_settings_files=off --write_settings_files=off regfile -c regfile
 quartus_sta regfile -c regfile
 quartus_eda --read_settings_files=off --write_settings_files=off regfile -c regfile
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off regfile -c regfile --vector_source=C:/Users/ka266/Documents/Project3/Waveform.vwf --testbench_file=C:/Users/ka266/Documents/Project3/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/ka266/Documents/Project3/simulation/qsim/ regfile -c regfile
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off regfile -c regfile --vector_source=C:/Users/ka266/Documents/Project3/Waveform.vwf --testbench_file=C:/Users/ka266/Documents/Project3/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/ka266/Documents/Project3/simulation/qsim/ regfile -c regfile
 
 
 

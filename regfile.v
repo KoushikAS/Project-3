@@ -28,6 +28,10 @@ module regfile (
 
 	//read1
 	
+	//mux2_1_32bit m (data_readRegA,ctrl_readRegA[0],w[0],w[1]);
+	
+	//read1
+	
 	genvar j;
 	generate
 		for(j=0; j<32; j = j+1) begin : read1
@@ -44,8 +48,6 @@ module regfile (
 		end
 	endgenerate 
 	
-	
-
 	
 	
 
