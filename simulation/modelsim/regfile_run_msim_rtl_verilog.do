@@ -8,6 +8,7 @@ vmap work rtl_work
 vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/reg_32.v}
 vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/regfile.v}
 vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/dffe.v}
+vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/decoder5_32.v}
 
 vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/regfile_tb.v}
 

@@ -42,7 +42,20 @@ module regfile_tb();
 		checkRegister(index, 32'h0000DEAD);
 	    end
         end
+		  
+        ctrl_reset = 1'b1;    // assert reset
+        @(negedge clock);    // wait until next negative edge of clock
+        @(negedge clock);    // wait until next negative edge of clock
 
+        ctrl_reset = 1'b0;    // de-assert reset
+        @(negedge clock);    // wait until next negative edge of clock
+		  
+		  $display("Checking reset");
+		  for(index = 0; index <= 31; index = index + 1) begin
+				checkRegister(index, 32'h0);
+		  end
+		  
+		  
         if (errors == 0) begin
             $display("The simulation completed without errors");
         end

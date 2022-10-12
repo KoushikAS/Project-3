@@ -1,5 +1,5 @@
 Analysis & Synthesis report for regfile
-Wed Oct 12 11:57:35 2022
+Wed Oct 12 16:38:26 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -15,11 +15,12 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Port Connectivity Checks: "reg_32:rew"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
- 14. Analysis & Synthesis Suppressed Messages
+ 10. Port Connectivity Checks: "decoder5_32:d1"
+ 11. Port Connectivity Checks: "reg_32:rew"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,7 +47,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 12 11:57:35 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 12 16:38:26 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; regfile                                     ;
 ; Top-level Entity Name              ; regfile                                     ;
@@ -166,15 +167,16 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                              ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
-; reg_32.v                         ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/reg_32.v  ;         ;
-; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/regfile.v ;         ;
-; dffe.v                           ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/dffe.v    ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
+; reg_32.v                         ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/reg_32.v      ;         ;
+; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/regfile.v     ;         ;
+; dffe.v                           ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/dffe.v        ;         ;
+; decoder5_32.v                    ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/decoder5_32.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -187,8 +189,8 @@ agreement for further details.
 ; Total combinational functions               ; 1423        ;
 ; Logic element usage by number of LUT inputs ;             ;
 ;     -- 4 input functions                    ; 1328        ;
-;     -- 3 input functions                    ; 95          ;
-;     -- <=2 input functions                  ; 0           ;
+;     -- 3 input functions                    ; 64          ;
+;     -- <=2 input functions                  ; 31          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
 ;     -- normal mode                          ; 1423        ;
@@ -204,8 +206,8 @@ agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 992         ;
-; Total fan-out                               ; 9743        ;
-; Average fan-out                             ; 3.69        ;
+; Total fan-out                               ; 9712        ;
+; Average fan-out                             ; 3.67        ;
 +---------------------------------------------+-------------+
 
 
@@ -214,7 +216,10 @@ agreement for further details.
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+-------------+--------------+
-; |regfile                          ; 1423 (1423)         ; 992 (0)                   ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |regfile                                                ; regfile     ; work         ;
+; |regfile                          ; 1423 (1344)         ; 992 (0)                   ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |regfile                                                ; regfile     ; work         ;
+;    |decoder5_32:d1|               ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|decoder5_32:d1                                 ; decoder5_32 ; work         ;
+;    |decoder5_32:d2|               ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|decoder5_32:d2                                 ; decoder5_32 ; work         ;
+;    |decoder5_32:d3|               ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|decoder5_32:d3                                 ; decoder5_32 ; work         ;
 ;    |reg_32:write[10].rew|         ; 0 (0)               ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[10].rew                           ; reg_32      ; work         ;
 ;       |dffe_ref:intialize[0].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[10].rew|dffe_ref:intialize[0].df  ; dffe_ref    ; work         ;
 ;       |dffe_ref:intialize[10].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[10].rew|dffe_ref:intialize[10].df ; dffe_ref    ; work         ;
@@ -1242,45 +1247,45 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; reg_32:rew|dffe_ref:intialize[31].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[30].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[29].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[28].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[27].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[26].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[25].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[24].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[23].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[22].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[21].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[20].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[19].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[18].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[17].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[16].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[15].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[14].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[13].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[12].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[11].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[10].df|q ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[9].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[8].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[7].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[6].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[5].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[4].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[3].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[2].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[1].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; reg_32:rew|dffe_ref:intialize[0].df|q  ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 32 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                            ;
++----------------------------------------+--------------------------------------+
+; Register name                          ; Reason for Removal                   ;
++----------------------------------------+--------------------------------------+
+; reg_32:rew|dffe_ref:intialize[31].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[30].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[29].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[28].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[27].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[26].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[25].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[24].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[23].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[22].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[21].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[20].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[19].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[18].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[17].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[16].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[15].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[14].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[13].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[12].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[11].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[10].df|q ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[9].df|q  ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[8].df|q  ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[7].df|q  ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[6].df|q  ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[5].df|q  ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[4].df|q  ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[3].df|q  ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[2].df|q  ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[1].df|q  ; Stuck at GND due to stuck port clear ;
+; reg_32:rew|dffe_ref:intialize[0].df|q  ; Stuck at GND due to stuck port clear ;
+; Total Number of Removed Registers = 32 ;                                      ;
++----------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1298,15 +1303,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:rew"                                                                                                                                                                         ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; en     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; en[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; clr    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decoder5_32:d1"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; o0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "reg_32:rew" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; en   ; Input ; Info     ; Stuck at GND ;
+; clr  ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -1320,11 +1333,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_io_obuf    ; 64                          ;
 ; cycloneiii_lcell_comb ; 1423                        ;
 ;     normal            ; 1423                        ;
-;         3 data inputs ; 95                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 64                          ;
 ;         4 data inputs ; 1328                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.68                        ;
+; Average LUT depth     ; 3.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1343,16 +1357,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 12 11:57:19 2022
+    Info: Processing started: Wed Oct 12 16:38:08 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off regfile -c regfile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file mux16_4_32bit.v
-    Info (12023): Found entity 1: mux16_4_32bit File: C:/Users/ka266/Documents/Project3/mux16_4_32bit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux4_2_32bit.v
-    Info (12023): Found entity 1: mux4_2_32bit File: C:/Users/ka266/Documents/Project3/mux4_2_32bit.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux2_1_32bit.v
-    Info (12023): Found entity 1: mux2_1_32bit File: C:/Users/ka266/Documents/Project3/mux2_1_32bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file reg_32.v
     Info (12023): Found entity 1: reg_32 File: C:/Users/ka266/Documents/Project3/reg_32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
@@ -1361,23 +1369,28 @@ Info (12021): Found 1 design units, including 1 entities, in source file regfile
     Info (12023): Found entity 1: regfile_tb File: C:/Users/ka266/Documents/Project3/regfile_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file dffe.v
     Info (12023): Found entity 1: dffe_ref File: C:/Users/ka266/Documents/Project3/dffe.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file read.v
+Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32.v
+    Info (12023): Found entity 1: decoder5_32 File: C:/Users/ka266/Documents/Project3/decoder5_32.v Line: 1
 Info (12127): Elaborating entity "regfile" for the top level hierarchy
 Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:rew" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 21
 Info (12128): Elaborating entity "dffe_ref" for hierarchy "reg_32:rew|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project3/reg_32.v Line: 17
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "decoder5_32" for hierarchy "decoder5_32:d1" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 26
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/ka266/Documents/Project3/output_files/regfile.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ctrl_writeEnable" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 9
 Info (21057): Implemented 2529 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 50 input pins
     Info (21059): Implemented 64 output pins
     Info (21061): Implemented 2415 logic cells
-Info (144001): Generated suppressed messages file C:/Users/ka266/Documents/Project3/output_files/regfile.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4752 megabytes
-    Info: Processing ended: Wed Oct 12 11:57:35 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4756 megabytes
+    Info: Processing ended: Wed Oct 12 16:38:26 2022
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+

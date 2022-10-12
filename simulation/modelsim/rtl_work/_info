@@ -8,30 +8,52 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/ka266/Documents/Project3/simulation/modelsim
-vdffe_ref
-Z1 !s110 1665590314
+vdecoder5_32
+Z1 !s110 1665607165
 !i10b 1
-!s100 m2?1a8:`omUTO_3UK>MQz1
-Iz3iZbBZfXO>6R5g4>T]5Q0
+!s100 4W3`G8oe:ChSoe`VN?k6D3
+I9BI1>e:]ll85eI_U<6[2>1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1665588698
-8C:/Users/ka266/Documents/Project3/dffe.v
-FC:/Users/ka266/Documents/Project3/dffe.v
+w1665605775
+8C:/Users/ka266/Documents/Project3/decoder5_32.v
+FC:/Users/ka266/Documents/Project3/decoder5_32.v
 L0 1
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1665590314.000000
-!s107 C:/Users/ka266/Documents/Project3/dffe.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project3|C:/Users/ka266/Documents/Project3/dffe.v|
+Z4 !s108 1665607165.000000
+!s107 C:/Users/ka266/Documents/Project3/decoder5_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project3|C:/Users/ka266/Documents/Project3/decoder5_32.v|
 !i113 1
 Z5 o-vlog01compat -work work
 Z6 !s92 -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3
 Z7 tCvgOpt 0
-vreg_32
+vdffe_ref
 R1
+!i10b 1
+!s100 68@ez4MJVXiU<GU8=EGUV0
+ISOdc?z:OBR1<od2lmD7DE3
+R2
+R0
+w1665607086
+8C:/Users/ka266/Documents/Project3/dffe.v
+FC:/Users/ka266/Documents/Project3/dffe.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/ka266/Documents/Project3/dffe.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project3|C:/Users/ka266/Documents/Project3/dffe.v|
+!i113 1
+R5
+R6
+R7
+vreg_32
+!s110 1665607164
 !i10b 1
 !s100 KLKEDeo8nGKeDJWA=UCWC1
 IdL]Um1HanE5h?E9bMdnea3
@@ -45,7 +67,7 @@ R3
 r1
 !s85 0
 31
-R4
+!s108 1665607164.000000
 !s107 C:/Users/ka266/Documents/Project3/reg_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project3|C:/Users/ka266/Documents/Project3/reg_32.v|
 !i113 1
@@ -55,11 +77,11 @@ R7
 vregfile
 R1
 !i10b 1
-!s100 DiM1;];5l@8loHN1Udzbb3
-I]aG^f>e289W@gP>0=LkS<1
+!s100 XKO]?1lXzQL1nQl61DjOP2
+IWaVMjRfPQ3T;SWz>[MnjS3
 R2
 R0
-w1665590233
+w1665605977
 8C:/Users/ka266/Documents/Project3/regfile.v
 FC:/Users/ka266/Documents/Project3/regfile.v
 L0 1
@@ -77,11 +99,11 @@ R7
 vregfile_tb
 R1
 !i10b 1
-!s100 L618:cZEjdSH7JoDEIcel3
-IGijhHbDkocU0c=6TRM:Ug2
+!s100 g7]XNV?YzH0j^;E<:ZNjh1
+IIic;A>cCef7Vj:lS3G=gK0
 R2
 R0
-w1665529067
+w1665606871
 8C:/Users/ka266/Documents/Project3/regfile_tb.v
 FC:/Users/ka266/Documents/Project3/regfile_tb.v
 L0 3

@@ -8,108 +8,150 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/ka266/Documents/Project3/simulation/qsim
-vhard_block
-Z1 !s110 1665589433
+vdecoder5_32
+Z1 !s110 1665605841
 !i10b 1
-!s100 k3SbFfVK14>92N_1WL:<>1
-ISQU4DLTA=5;RRV8@4:iNU1
+!s100 fNMCH3aVP<goH>^[>:6k`1
+I6JFP]6mFa5LJ`RUD7WMJa3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1665589432
-Z4 8regfile.vo
-Z5 Fregfile.vo
-L0 47903
+w1665605840
+Z3 8regfile.vo
+Z4 Fregfile.vo
+Z5 L0 32
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1665589433.000000
+Z7 !s108 1665605841.000000
 Z8 !s107 regfile.vo|
 Z9 !s90 -work|work|regfile.vo|
 !i113 1
 Z10 o-work work
 Z11 tCvgOpt 0
+vdecoder5_32_vlg_vec_tst
+R1
+!i10b 1
+!s100 N6m1IK_9SB45ZM8PFOfTP3
+IY]0CA@A1F2zH>AgKcoWoi3
+R2
+R0
+w1665605839
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+Z12 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R10
+R11
+vhard_block
+Z13 !s110 1665607503
+!i10b 1
+!s100 LAEF=Qzz[B^z^m?j0X=MC0
+Ig@>]A7dKHMOkA@RQAEdj:0
+R2
+R0
+Z14 w1665607501
+R3
+R4
+L0 47245
+R6
+r1
+!s85 0
+31
+Z15 !s108 1665607502.000000
+R8
+R9
+!i113 1
+R10
+R11
 vreg_32
-Z12 !s110 1665588797
+Z16 !s110 1665588797
 !i10b 1
 !s100 :Y>PiScfHiof2l?nSm4ca1
 IO^bZkhBYTG]RER_G]<=lN1
 R2
 R0
 w1665588795
+R3
 R4
 R5
-Z13 L0 32
 R6
 r1
 !s85 0
 31
-Z14 !s108 1665588797.000000
+Z17 !s108 1665588797.000000
 R8
 R9
 !i113 1
 R10
 R11
 vreg_32_vlg_vec_tst
-R12
+R16
 !i10b 1
 !s100 5354>bZ^mM?k8zK3LLEdY3
 I<bOkb32148L[5oOm6YM`K3
 R2
 R0
 w1665588794
-8Waveform1.vwf.vt
-FWaveform1.vwf.vt
-Z15 L0 30
+Z18 8Waveform1.vwf.vt
+Z19 FWaveform1.vwf.vt
+R12
 R6
 r1
 !s85 0
 31
-R14
+R17
 !s107 Waveform1.vwf.vt|
-!s90 -work|work|Waveform1.vwf.vt|
+Z20 !s90 -work|work|Waveform1.vwf.vt|
 !i113 1
 R10
 R11
 vregfile
-R1
+R13
 !i10b 1
-!s100 0cV;A`KL?TL`E1SK7S8:l0
-IeL3YcN7ge^m7=cF`o^kzN0
+!s100 aDgAzSI]GMN<8fmDmoj]z0
+I7>kWMz9AX:6Ike^<^K>jX1
 R2
 R0
+R14
 R3
 R4
 R5
-R13
 R6
 r1
 !s85 0
 31
-R7
+R15
 R8
 R9
 !i113 1
 R10
 R11
 vregfile_vlg_vec_tst
-!s110 1665589434
+R13
 !i10b 1
-!s100 S:m9iL^<bPF`zR]ichZO92
-IR=Jn858]IHKhiI[8l9Y3e2
+!s100 2ZTkTHN]_MU=ZQa5Fm>@j0
+I8na>j5n2ZVT7Z6T2WhjRh3
 R2
 R0
-w1665589431
-8Waveform.vwf.vt
-FWaveform.vwf.vt
-R15
+w1665607500
+R18
+R19
+R12
 R6
 r1
 !s85 0
 31
-R7
-!s107 Waveform.vwf.vt|
-!s90 -work|work|Waveform.vwf.vt|
+!s108 1665607503.000000
+!s107 Waveform1.vwf.vt|
+R20
 !i113 1
 R10
 R11

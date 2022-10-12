@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/12/2022 11:43:50"
+// Generated on "10/12/2022 16:43:22"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          regfile
 // 
@@ -118,15 +118,20 @@ begin
 end 
 
 // ctrl_reset
-initial
+always
 begin
 	ctrl_reset = 1'b0;
+	ctrl_reset = #500000 1'b1;
+	#500000;
 end 
 
 // ctrl_writeEnable
 initial
 begin
-	ctrl_writeEnable = 1'b1;
+	ctrl_writeEnable = 1'b0;
+	ctrl_writeEnable = #250000 1'b1;
+	ctrl_writeEnable = #200000 1'b0;
+	ctrl_writeEnable = #300000 1'b1;
 end 
 // ctrl_writeReg[ 4 ]
 initial
