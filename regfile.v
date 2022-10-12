@@ -18,9 +18,11 @@ module regfile (
 
 	//write
 	
+	reg_32 rew (w[0], data_writeReg, clock, 0, 1'b0);
+	
 	genvar i;
 	generate
-		for(i=0; i<32; i = i+1) begin : write
+		for(i=1; i<32; i = i+1) begin : write
 			assign en[i] = i == ctrl_writeReg? ctrl_writeEnable: 1'b0;
 			reg_32 rew (w[i], data_writeReg, clock, en[i], ctrl_reset);
 		end

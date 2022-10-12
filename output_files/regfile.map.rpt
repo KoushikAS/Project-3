@@ -1,5 +1,5 @@
 Analysis & Synthesis report for regfile
-Wed Oct 12 11:35:55 2022
+Wed Oct 12 11:57:35 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,11 +13,13 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "reg_32:rew"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,15 +46,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 12 11:35:55 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 12 11:57:35 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; regfile                                     ;
 ; Top-level Entity Name              ; regfile                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,448                                       ;
-;     Total combinational functions  ; 1,424                                       ;
-;     Dedicated logic registers      ; 1,024                                       ;
-; Total registers                    ; 1024                                        ;
+; Total logic elements               ; 2,415                                       ;
+;     Total combinational functions  ; 1,423                                       ;
+;     Dedicated logic registers      ; 992                                         ;
+; Total registers                    ; 992                                         ;
 ; Total pins                         ; 114                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -180,20 +182,20 @@ agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 2,448       ;
+; Estimated Total logic elements              ; 2,415       ;
 ;                                             ;             ;
-; Total combinational functions               ; 1424        ;
+; Total combinational functions               ; 1423        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 1392        ;
-;     -- 3 input functions                    ; 32          ;
+;     -- 4 input functions                    ; 1328        ;
+;     -- 3 input functions                    ; 95          ;
 ;     -- <=2 input functions                  ; 0           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 1424        ;
+;     -- normal mode                          ; 1423        ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
-; Total registers                             ; 1024        ;
-;     -- Dedicated logic registers            ; 1024        ;
+; Total registers                             ; 992         ;
+;     -- Dedicated logic registers            ; 992         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 114         ;
@@ -201,9 +203,9 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 1024        ;
-; Total fan-out                               ; 9938        ;
-; Average fan-out                             ; 3.71        ;
+; Maximum fan-out                             ; 992         ;
+; Total fan-out                               ; 9743        ;
+; Average fan-out                             ; 3.69        ;
 +---------------------------------------------+-------------+
 
 
@@ -212,40 +214,7 @@ agreement for further details.
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+-------------+--------------+
-; |regfile                          ; 1424 (1424)         ; 1024 (0)                  ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |regfile                                                ; regfile     ; work         ;
-;    |reg_32:write[0].rew|          ; 0 (0)               ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew                            ; reg_32      ; work         ;
-;       |dffe_ref:intialize[0].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[0].df   ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[10].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[10].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[11].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[11].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[12].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[12].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[13].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[13].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[14].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[14].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[15].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[15].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[16].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[16].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[17].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[17].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[18].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[18].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[19].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[19].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[1].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[1].df   ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[20].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[20].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[21].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[21].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[22].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[22].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[23].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[23].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[24].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[24].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[25].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[25].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[26].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[26].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[27].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[27].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[28].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[28].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[29].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[29].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[2].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[2].df   ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[30].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[30].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[31].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[31].df  ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[3].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[3].df   ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[4].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[4].df   ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[5].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[5].df   ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[6].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[6].df   ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[7].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[7].df   ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[8].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[8].df   ; dffe_ref    ; work         ;
-;       |dffe_ref:intialize[9].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[0].rew|dffe_ref:intialize[9].df   ; dffe_ref    ; work         ;
+; |regfile                          ; 1423 (1423)         ; 992 (0)                   ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |regfile                                                ; regfile     ; work         ;
 ;    |reg_32:write[10].rew|         ; 0 (0)               ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[10].rew                           ; reg_32      ; work         ;
 ;       |dffe_ref:intialize[0].df|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[10].rew|dffe_ref:intialize[0].df  ; dffe_ref    ; work         ;
 ;       |dffe_ref:intialize[10].df| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[10].rew|dffe_ref:intialize[10].df ; dffe_ref    ; work         ;
@@ -1273,19 +1242,71 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; reg_32:rew|dffe_ref:intialize[31].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[30].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[29].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[28].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[27].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[26].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[25].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[24].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[23].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[22].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[21].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[20].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[19].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[18].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[17].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[16].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[15].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[14].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[13].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[12].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[11].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[10].df|q ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[9].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[8].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[7].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[6].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[5].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[4].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[3].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[2].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[1].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; reg_32:rew|dffe_ref:intialize[0].df|q  ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 32 ;                                             ;
++----------------------------------------+---------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1024  ;
+; Total registers                              ; 992   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1024  ;
+; Number of registers using Asynchronous Clear ; 992   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1024  ;
+; Number of registers using Clock Enable       ; 992   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_32:rew"                                                                                                                                                                         ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; en     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; en[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; clr    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1294,16 +1315,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 114                         ;
-; cycloneiii_ff         ; 1024                        ;
-;     ENA CLR           ; 1024                        ;
+; cycloneiii_ff         ; 992                         ;
+;     ENA CLR           ; 992                         ;
 ; cycloneiii_io_obuf    ; 64                          ;
-; cycloneiii_lcell_comb ; 1424                        ;
-;     normal            ; 1424                        ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 1392                        ;
+; cycloneiii_lcell_comb ; 1423                        ;
+;     normal            ; 1423                        ;
+;         3 data inputs ; 95                          ;
+;         4 data inputs ; 1328                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.40                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1322,7 +1343,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 12 11:35:38 2022
+    Info: Processing started: Wed Oct 12 11:57:19 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off regfile -c regfile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1341,21 +1362,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file regfile
 Info (12021): Found 1 design units, including 1 entities, in source file dffe.v
     Info (12023): Found entity 1: dffe_ref File: C:/Users/ka266/Documents/Project3/dffe.v Line: 1
 Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:write[0].rew" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 25
-Info (12128): Elaborating entity "dffe_ref" for hierarchy "reg_32:write[0].rew|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project3/reg_32.v Line: 17
+Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:rew" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 21
+Info (12128): Elaborating entity "dffe_ref" for hierarchy "reg_32:rew|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project3/reg_32.v Line: 17
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2562 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2529 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 50 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 2448 logic cells
+    Info (21061): Implemented 2415 logic cells
 Info (144001): Generated suppressed messages file C:/Users/ka266/Documents/Project3/output_files/regfile.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4751 megabytes
-    Info: Processing ended: Wed Oct 12 11:35:55 2022
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4752 megabytes
+    Info: Processing ended: Wed Oct 12 11:57:35 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+

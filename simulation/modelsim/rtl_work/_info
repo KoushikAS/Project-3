@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/ka266/Documents/Project3/simulation/modelsim
 vdffe_ref
-Z1 !s110 1665589184
+Z1 !s110 1665590314
 !i10b 1
 !s100 m2?1a8:`omUTO_3UK>MQz1
 Iz3iZbBZfXO>6R5g4>T]5Q0
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1665589184.000000
+Z4 !s108 1665590314.000000
 !s107 C:/Users/ka266/Documents/Project3/dffe.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project3|C:/Users/ka266/Documents/Project3/dffe.v|
 !i113 1
@@ -55,11 +55,11 @@ R7
 vregfile
 R1
 !i10b 1
-!s100 IK:Y9c0V_UOb8cHAU;dHX1
-I^66mMZEjG8oRmKP1QGaWB1
+!s100 DiM1;];5l@8loHN1Udzbb3
+I]aG^f>e289W@gP>0=LkS<1
 R2
 R0
-w1665588935
+w1665590233
 8C:/Users/ka266/Documents/Project3/regfile.v
 FC:/Users/ka266/Documents/Project3/regfile.v
 L0 1
