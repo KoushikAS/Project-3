@@ -14,7 +14,7 @@ module reg_32(q, d, clk, en, clr);
 	genvar i;
 	generate
 		for(i=0; i<32; i = i+1) begin : intialize
-			dffe_ref df (q[i], d[i], clk, en, clr);
+			dffe df (q[i], d[i], clk, en, clr);
 		end
 	endgenerate 
 	

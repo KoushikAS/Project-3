@@ -13,18 +13,40 @@ module regfile (
    output [31:0] data_readRegA, data_readRegB;
 	
 	wire[31:0] w[31:0];
+	wire[31:0] en;
+	//write write_reg (clock, ctrl_writeEnable, ctrl_reset, ctrl_writeReg, data_writeReg,w);
 
-   /* YOUR CODE HERE */
+	//write
 	
-	//wire
 	genvar i;
 	generate
 		for(i=0; i<32; i = i+1) begin : write
-			reg_32 rew (w[i], data_writeReg, clock, ctrl_writeEnable, ctrl_reset);
+			assign en[i] = i == ctrl_writeReg? ctrl_writeEnable: 1'b0;
+			reg_32 rew (w[i], data_writeReg, clock, en[i], ctrl_reset);
 		end
 	endgenerate  
 
 	//read1
 	
+	genvar j;
+	generate
+		for(j=0; j<32; j = j+1) begin : read1
+			assign data_readRegA = j == ctrl_readRegA ? w[j] : 31'bz;
+		end
+	endgenerate 
+	
+	//read2
+	
+	genvar k;
+	generate
+		for(k=0; k<32; k = k+1) begin : read2
+			assign data_readRegB = k == ctrl_readRegB ? w[k] : 31'bz;
+		end
+	endgenerate 
+	
+	
 
-endmodule
+	
+	
+
+endmodule 

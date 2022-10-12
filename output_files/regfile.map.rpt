@@ -1,5 +1,5 @@
 Analysis & Synthesis report for regfile
-Tue Oct 11 18:58:25 2022
+Tue Oct 11 20:41:06 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,41 +14,10 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "reg_32:write[31].rew"
- 10. Port Connectivity Checks: "reg_32:write[30].rew"
- 11. Port Connectivity Checks: "reg_32:write[29].rew"
- 12. Port Connectivity Checks: "reg_32:write[28].rew"
- 13. Port Connectivity Checks: "reg_32:write[27].rew"
- 14. Port Connectivity Checks: "reg_32:write[26].rew"
- 15. Port Connectivity Checks: "reg_32:write[25].rew"
- 16. Port Connectivity Checks: "reg_32:write[24].rew"
- 17. Port Connectivity Checks: "reg_32:write[23].rew"
- 18. Port Connectivity Checks: "reg_32:write[22].rew"
- 19. Port Connectivity Checks: "reg_32:write[21].rew"
- 20. Port Connectivity Checks: "reg_32:write[20].rew"
- 21. Port Connectivity Checks: "reg_32:write[19].rew"
- 22. Port Connectivity Checks: "reg_32:write[18].rew"
- 23. Port Connectivity Checks: "reg_32:write[17].rew"
- 24. Port Connectivity Checks: "reg_32:write[16].rew"
- 25. Port Connectivity Checks: "reg_32:write[15].rew"
- 26. Port Connectivity Checks: "reg_32:write[14].rew"
- 27. Port Connectivity Checks: "reg_32:write[13].rew"
- 28. Port Connectivity Checks: "reg_32:write[12].rew"
- 29. Port Connectivity Checks: "reg_32:write[11].rew"
- 30. Port Connectivity Checks: "reg_32:write[10].rew"
- 31. Port Connectivity Checks: "reg_32:write[9].rew"
- 32. Port Connectivity Checks: "reg_32:write[8].rew"
- 33. Port Connectivity Checks: "reg_32:write[7].rew"
- 34. Port Connectivity Checks: "reg_32:write[6].rew"
- 35. Port Connectivity Checks: "reg_32:write[5].rew"
- 36. Port Connectivity Checks: "reg_32:write[4].rew"
- 37. Port Connectivity Checks: "reg_32:write[3].rew"
- 38. Port Connectivity Checks: "reg_32:write[2].rew"
- 39. Port Connectivity Checks: "reg_32:write[1].rew"
- 40. Port Connectivity Checks: "reg_32:write[0].rew"
- 41. Post-Synthesis Netlist Statistics for Top Partition
- 42. Elapsed Time Per Partition
- 43. Analysis & Synthesis Messages
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -75,7 +44,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 11 18:58:25 2022       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 11 20:41:06 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; regfile                                     ;
 ; Top-level Entity Name              ; regfile                                     ;
@@ -194,46 +163,45 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                               ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                 ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
-; reg_32.v                         ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/reg_32.v   ;         ;
-; dffe_ref.v                       ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/dffe_ref.v ;         ;
-; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/regfile.v  ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; reg_32.v                         ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/reg_32.v  ;         ;
+; regfile.v                        ; yes             ; User Verilog HDL File  ; C:/Users/ka266/Documents/Project3/regfile.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 114   ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 114   ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+;                                             ;                         ;
+; Total combinational functions               ; 0                       ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 0                       ;
+;     -- 3 input functions                    ; 0                       ;
+;     -- <=2 input functions                  ; 0                       ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 0                       ;
+;     -- arithmetic mode                      ; 0                       ;
+;                                             ;                         ;
+; Total registers                             ; 0                       ;
+;     -- Dedicated logic registers            ; 0                       ;
+;     -- I/O registers                        ; 0                       ;
+;                                             ;                         ;
+; I/O pins                                    ; 114                     ;
+;                                             ;                         ;
+; Embedded Multiplier 9-bit elements          ; 0                       ;
+;                                             ;                         ;
+; Maximum fan-out node                        ; data_readRegA[0]~output ;
+; Maximum fan-out                             ; 1                       ;
+; Total fan-out                               ; 114                     ;
+; Average fan-out                             ; 0.50                    ;
++---------------------------------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -261,307 +229,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[31].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[30].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[29].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[28].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[27].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[26].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[25].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[24].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[23].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[22].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[21].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[20].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[19].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[18].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[17].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[16].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[15].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[14].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[13].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[12].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[11].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[10].rew"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[9].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[8].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[7].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[6].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[5].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[4].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[3].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[2].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[1].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32:write[0].rew"                                                                ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 114                         ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
++--------------------+--------------------------------+
+; Type               ; Count                          ;
++--------------------+--------------------------------+
+; boundary_port      ; 114                            ;
+; cycloneiii_io_obuf ; 64                             ;
+;                    ;                                ;
+; Max LUT depth      ; 0.00                           ;
+; Average LUT depth  ; 0.00                           ;
++--------------------+--------------------------------+
 
 
 +-------------------------------+
@@ -569,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -579,88 +257,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Oct 11 18:58:11 2022
+    Info: Processing started: Tue Oct 11 20:40:51 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off regfile -c regfile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file reg_32.v
     Info (12023): Found entity 1: reg_32 File: C:/Users/ka266/Documents/Project3/reg_32.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file dffe_ref.v
-    Info (12023): Found entity 1: dffe_ref File: C:/Users/ka266/Documents/Project3/dffe_ref.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
     Info (12023): Found entity 1: regfile File: C:/Users/ka266/Documents/Project3/regfile.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile_tb.v
     Info (12023): Found entity 1: regfile_tb File: C:/Users/ka266/Documents/Project3/regfile_tb.v Line: 3
+Warning (12018): Entity "dffe" will be ignored because it conflicts with Quartus Prime primitive name File: C:/Users/ka266/Documents/Project3/dffe.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dffe.v
+Info (12021): Found 1 design units, including 1 entities, in source file write.v
+    Info (12023): Found entity 1: write File: C:/Users/ka266/Documents/Project3/write.v Line: 1
 Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Warning (10034): Output port "data_readRegA" at regfile.v(13) has no driver File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-Warning (10034): Output port "data_readRegB" at regfile.v(13) has no driver File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:write[0].rew" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 23
-Info (12128): Elaborating entity "dffe_ref" for hierarchy "reg_32:write[0].rew|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project3/reg_32.v Line: 17
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "data_readRegA[0]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[1]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[2]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[3]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[4]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[5]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[6]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[7]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[8]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[9]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[10]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[11]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[12]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[13]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[14]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[15]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[16]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[17]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[18]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[19]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[20]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[21]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[22]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[23]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[24]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[25]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[26]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[27]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[28]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[29]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[30]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegA[31]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[0]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[1]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[2]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[3]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[4]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[5]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[6]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[7]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[8]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[9]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[10]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[11]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[12]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[13]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[14]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[15]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[16]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[17]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[18]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[19]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[20]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[21]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[22]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[23]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[24]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[25]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[26]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[27]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[28]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[29]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[30]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
-    Warning (13410): Pin "data_readRegB[31]" is stuck at GND File: C:/Users/ka266/Documents/Project3/regfile.v Line: 13
+Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:write[0].rew" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 25
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/ka266/Documents/Project3/output_files/regfile.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 50 input pin(s) that do not drive logic
@@ -672,16 +286,6 @@ Warning (21074): Design contains 50 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ctrl_writeReg[2]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
     Warning (15610): No output dependent on input pin "ctrl_writeReg[3]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
     Warning (15610): No output dependent on input pin "ctrl_writeReg[4]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegA[0]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegA[1]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegA[2]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegA[3]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegA[4]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegB[0]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegB[1]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegB[2]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegB[3]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
-    Warning (15610): No output dependent on input pin "ctrl_readRegB[4]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
     Warning (15610): No output dependent on input pin "data_writeReg[0]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 11
     Warning (15610): No output dependent on input pin "data_writeReg[1]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 11
     Warning (15610): No output dependent on input pin "data_writeReg[2]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 11
@@ -714,13 +318,29 @@ Warning (21074): Design contains 50 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "data_writeReg[29]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 11
     Warning (15610): No output dependent on input pin "data_writeReg[30]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 11
     Warning (15610): No output dependent on input pin "data_writeReg[31]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 11
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[0]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[0]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[4]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[3]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[2]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_readRegA[1]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[4]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[3]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[2]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
+    Warning (15610): No output dependent on input pin "ctrl_readRegB[1]" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 10
 Info (21057): Implemented 114 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 50 input pins
     Info (21059): Implemented 64 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 119 warnings
-    Info: Peak virtual memory: 4745 megabytes
-    Info: Processing ended: Tue Oct 11 18:58:25 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 4731 megabytes
+    Info: Processing ended: Tue Oct 11 20:41:06 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/ka266/Documents/Project3/output_files/regfile.map.smsg.
 
 
