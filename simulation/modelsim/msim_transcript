@@ -12,59 +12,59 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/reg_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:39:24 on Oct 12,2022
+# Start time: 17:26:14 on Oct 13,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project3" C:/Users/ka266/Documents/Project3/reg_32.v 
 # -- Compiling module reg_32
 # 
 # Top level modules:
 # 	reg_32
-# End time: 16:39:24 on Oct 12,2022, Elapsed time: 0:00:00
+# End time: 17:26:14 on Oct 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/regfile.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:39:25 on Oct 12,2022
+# Start time: 17:26:14 on Oct 13,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project3" C:/Users/ka266/Documents/Project3/regfile.v 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 16:39:25 on Oct 12,2022, Elapsed time: 0:00:00
+# End time: 17:26:14 on Oct 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/dffe.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:39:25 on Oct 12,2022
+# Start time: 17:26:14 on Oct 13,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project3" C:/Users/ka266/Documents/Project3/dffe.v 
 # -- Compiling module dffe_ref
 # 
 # Top level modules:
 # 	dffe_ref
-# End time: 16:39:25 on Oct 12,2022, Elapsed time: 0:00:00
+# End time: 17:26:14 on Oct 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/decoder5_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:39:25 on Oct 12,2022
+# Start time: 17:26:14 on Oct 13,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project3" C:/Users/ka266/Documents/Project3/decoder5_32.v 
 # -- Compiling module decoder5_32
 # 
 # Top level modules:
 # 	decoder5_32
-# End time: 16:39:25 on Oct 12,2022, Elapsed time: 0:00:00
+# End time: 17:26:14 on Oct 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/ka266/Documents/Project3 {C:/Users/ka266/Documents/Project3/regfile_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:39:25 on Oct 12,2022
+# Start time: 17:26:14 on Oct 13,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ka266/Documents/Project3" C:/Users/ka266/Documents/Project3/regfile_tb.v 
 # -- Compiling module regfile_tb
 # 
 # Top level modules:
 # 	regfile_tb
-# End time: 16:39:25 on Oct 12,2022, Elapsed time: 0:00:00
+# End time: 17:26:14 on Oct 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  regfile_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" regfile_tb 
-# Start time: 16:39:25 on Oct 12,2022
+# Start time: 17:26:14 on Oct 13,2022
 # Loading work.regfile_tb
 # Loading work.regfile
 # Loading work.reg_32
@@ -72,6 +72,11 @@
 # Loading work.dffe_ref
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: ka266  Hostname: VCM-28338  ProcessID: 7868
+#           Attempting to use alternate WLF file "./wlft0hhs2x".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0hhs2x
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -111,9 +116,73 @@
 #                 2480 << Writing register 30 with 0000dead >>
 #                 2560 << Writing register 31 with 0000dead >>
 # Checking reset
-# **Error on port A: read 0000dead but expected 00000000.
-# **Error on port B: read 0000dead but expected 00000000.
-# The simulation failed with           2 errors
-# ** Note: $stop    : C:/Users/ka266/Documents/Project3/regfile_tb.v(66)
-#    Time: 3960 ns  Iteration: 1  Instance: /regfile_tb
-# Break in Module regfile_tb at C:/Users/ka266/Documents/Project3/regfile_tb.v line 66
+# Checking write enable off
+#                 3980 << No enable Writing register  0 with 0000dead >>
+#                 4000 << No enable Writing register  1 with 0000dead >>
+#                 4020 << No enable Writing register  2 with 0000dead >>
+#                 4040 << No enable Writing register  3 with 0000dead >>
+#                 4060 << No enable Writing register  4 with 0000dead >>
+#                 4080 << No enable Writing register  5 with 0000dead >>
+#                 4100 << No enable Writing register  6 with 0000dead >>
+#                 4120 << No enable Writing register  7 with 0000dead >>
+#                 4140 << No enable Writing register  8 with 0000dead >>
+#                 4160 << No enable Writing register  9 with 0000dead >>
+#                 4180 << No enable Writing register 10 with 0000dead >>
+#                 4200 << No enable Writing register 11 with 0000dead >>
+#                 4220 << No enable Writing register 12 with 0000dead >>
+#                 4240 << No enable Writing register 13 with 0000dead >>
+#                 4260 << No enable Writing register 14 with 0000dead >>
+#                 4280 << No enable Writing register 15 with 0000dead >>
+#                 4300 << No enable Writing register 16 with 0000dead >>
+#                 4320 << No enable Writing register 17 with 0000dead >>
+#                 4340 << No enable Writing register 18 with 0000dead >>
+#                 4360 << No enable Writing register 19 with 0000dead >>
+#                 4380 << No enable Writing register 20 with 0000dead >>
+#                 4400 << No enable Writing register 21 with 0000dead >>
+#                 4420 << No enable Writing register 22 with 0000dead >>
+#                 4440 << No enable Writing register 23 with 0000dead >>
+#                 4460 << No enable Writing register 24 with 0000dead >>
+#                 4480 << No enable Writing register 25 with 0000dead >>
+#                 4500 << No enable Writing register 26 with 0000dead >>
+#                 4520 << No enable Writing register 27 with 0000dead >>
+#                 4540 << No enable Writing register 28 with 0000dead >>
+#                 4560 << No enable Writing register 29 with 0000dead >>
+#                 4580 << No enable Writing register 30 with 0000dead >>
+#                 4600 << No enable Writing register 31 with 0000dead >>
+# Checking different write
+#                 5900 << Writing register  0 with 00000000 >>
+#                 5940 << Writing register  1 with 00000001 >>
+#                 5980 << Writing register  2 with 00000002 >>
+#                 6020 << Writing register  3 with 00000003 >>
+#                 6060 << Writing register  4 with 00000004 >>
+#                 6100 << Writing register  5 with 00000005 >>
+#                 6140 << Writing register  6 with 00000006 >>
+#                 6180 << Writing register  7 with 00000007 >>
+#                 6220 << Writing register  8 with 00000008 >>
+#                 6260 << Writing register  9 with 00000009 >>
+#                 6300 << Writing register 10 with 0000000a >>
+#                 6340 << Writing register 11 with 0000000b >>
+#                 6380 << Writing register 12 with 0000000c >>
+#                 6420 << Writing register 13 with 0000000d >>
+#                 6460 << Writing register 14 with 0000000e >>
+#                 6500 << Writing register 15 with 0000000f >>
+#                 6540 << Writing register 16 with 00000010 >>
+#                 6580 << Writing register 17 with 00000011 >>
+#                 6620 << Writing register 18 with 00000012 >>
+#                 6660 << Writing register 19 with 00000013 >>
+#                 6700 << Writing register 20 with 00000014 >>
+#                 6740 << Writing register 21 with 00000015 >>
+#                 6780 << Writing register 22 with 00000016 >>
+#                 6820 << Writing register 23 with 00000017 >>
+#                 6860 << Writing register 24 with 00000018 >>
+#                 6900 << Writing register 25 with 00000019 >>
+#                 6940 << Writing register 26 with 0000001a >>
+#                 6980 << Writing register 27 with 0000001b >>
+#                 7020 << Writing register 28 with 0000001c >>
+#                 7060 << Writing register 29 with 0000001d >>
+#                 7100 << Writing register 30 with 0000001e >>
+#                 7140 << Writing register 31 with 0000001f >>
+# The simulation completed without errors
+# ** Note: $stop    : C:/Users/ka266/Documents/Project3/regfile_tb.v(94)
+#    Time: 8440 ns  Iteration: 1  Instance: /regfile_tb
+# Break in Module regfile_tb at C:/Users/ka266/Documents/Project3/regfile_tb.v line 94

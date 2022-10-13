@@ -14,6 +14,7 @@ module regfile (
 	
 	wire[31:0] w[31:0];
 	wire[31:0] en1,en2,en3;
+	wire[31:0] tmp;
 	
 	
 	//write
@@ -28,7 +29,8 @@ module regfile (
 	genvar i;
 	generate
 		for(i=1; i<32; i = i+1) begin : write
-		reg_32 rew (w[i], data_writeReg, clock, en1[i], ctrl_reset);
+		and a (tmp[i],en1[i],ctrl_writeEnable);
+		reg_32 rew (w[i], data_writeReg, clock, tmp[i], ctrl_reset);
 		end
 	endgenerate  
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for regfile
-Wed Oct 12 16:38:26 2022
+Thu Oct 13 17:23:54 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 12 16:38:26 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 13 17:23:54 2022       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; regfile                                     ;
 ; Top-level Entity Name              ; regfile                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,415                                       ;
-;     Total combinational functions  ; 1,423                                       ;
+; Total logic elements               ; 2,410                                       ;
+;     Total combinational functions  ; 1,418                                       ;
 ;     Dedicated logic registers      ; 992                                         ;
 ; Total registers                    ; 992                                         ;
 ; Total pins                         ; 114                                         ;
@@ -184,16 +184,16 @@ agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 2,415       ;
+; Estimated Total logic elements              ; 2,410       ;
 ;                                             ;             ;
-; Total combinational functions               ; 1423        ;
+; Total combinational functions               ; 1418        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 1328        ;
-;     -- 3 input functions                    ; 64          ;
-;     -- <=2 input functions                  ; 31          ;
+;     -- 4 input functions                    ; 1331        ;
+;     -- 3 input functions                    ; 79          ;
+;     -- <=2 input functions                  ; 8           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 1423        ;
+;     -- normal mode                          ; 1418        ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 992         ;
@@ -206,8 +206,8 @@ agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 992         ;
-; Total fan-out                               ; 9712        ;
-; Average fan-out                             ; 3.67        ;
+; Total fan-out                               ; 9723        ;
+; Average fan-out                             ; 3.69        ;
 +---------------------------------------------+-------------+
 
 
@@ -216,8 +216,8 @@ agreement for further details.
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+-------------+--------------+
-; |regfile                          ; 1423 (1344)         ; 992 (0)                   ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |regfile                                                ; regfile     ; work         ;
-;    |decoder5_32:d1|               ; 47 (47)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|decoder5_32:d1                                 ; decoder5_32 ; work         ;
+; |regfile                          ; 1418 (1344)         ; 992 (0)                   ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |regfile                                                ; regfile     ; work         ;
+;    |decoder5_32:d1|               ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|decoder5_32:d1                                 ; decoder5_32 ; work         ;
 ;    |decoder5_32:d2|               ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|decoder5_32:d2                                 ; decoder5_32 ; work         ;
 ;    |decoder5_32:d3|               ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|decoder5_32:d3                                 ; decoder5_32 ; work         ;
 ;    |reg_32:write[10].rew|         ; 0 (0)               ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|reg_32:write[10].rew                           ; reg_32      ; work         ;
@@ -1331,11 +1331,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_ff         ; 992                         ;
 ;     ENA CLR           ; 992                         ;
 ; cycloneiii_io_obuf    ; 64                          ;
-; cycloneiii_lcell_comb ; 1423                        ;
-;     normal            ; 1423                        ;
-;         2 data inputs ; 31                          ;
-;         3 data inputs ; 64                          ;
-;         4 data inputs ; 1328                        ;
+; cycloneiii_lcell_comb ; 1418                        ;
+;     normal            ; 1418                        ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 79                          ;
+;         4 data inputs ; 1331                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
 ; Average LUT depth     ; 3.69                        ;
@@ -1347,7 +1347,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1357,7 +1357,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 12 16:38:08 2022
+    Info: Processing started: Thu Oct 13 17:23:37 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off regfile -c regfile
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1369,28 +1369,25 @@ Info (12021): Found 1 design units, including 1 entities, in source file regfile
     Info (12023): Found entity 1: regfile_tb File: C:/Users/ka266/Documents/Project3/regfile_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file dffe.v
     Info (12023): Found entity 1: dffe_ref File: C:/Users/ka266/Documents/Project3/dffe.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file read.v
 Info (12021): Found 1 design units, including 1 entities, in source file decoder5_32.v
     Info (12023): Found entity 1: decoder5_32 File: C:/Users/ka266/Documents/Project3/decoder5_32.v Line: 1
 Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:rew" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 21
+Info (12128): Elaborating entity "reg_32" for hierarchy "reg_32:rew" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 22
 Info (12128): Elaborating entity "dffe_ref" for hierarchy "reg_32:rew|dffe_ref:intialize[0].df" File: C:/Users/ka266/Documents/Project3/reg_32.v Line: 17
-Info (12128): Elaborating entity "decoder5_32" for hierarchy "decoder5_32:d1" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 26
+Info (12128): Elaborating entity "decoder5_32" for hierarchy "decoder5_32:d1" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 27
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/ka266/Documents/Project3/output_files/regfile.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ctrl_writeEnable" File: C:/Users/ka266/Documents/Project3/regfile.v Line: 9
-Info (21057): Implemented 2529 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2524 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 50 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 2415 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4756 megabytes
-    Info: Processing ended: Wed Oct 12 16:38:26 2022
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:25
+    Info (21061): Implemented 2410 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4748 megabytes
+    Info: Processing ended: Thu Oct 13 17:23:54 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

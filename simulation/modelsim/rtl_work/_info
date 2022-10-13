@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/ka266/Documents/Project3/simulation/modelsim
 vdecoder5_32
-Z1 !s110 1665607165
+Z1 !s110 1665696374
 !i10b 1
 !s100 4W3`G8oe:ChSoe`VN?k6D3
 I9BI1>e:]ll85eI_U<6[2>1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1665607165.000000
+Z4 !s108 1665696374.000000
 !s107 C:/Users/ka266/Documents/Project3/decoder5_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project3|C:/Users/ka266/Documents/Project3/decoder5_32.v|
 !i113 1
@@ -33,11 +33,11 @@ Z7 tCvgOpt 0
 vdffe_ref
 R1
 !i10b 1
-!s100 68@ez4MJVXiU<GU8=EGUV0
-ISOdc?z:OBR1<od2lmD7DE3
+!s100 m2?1a8:`omUTO_3UK>MQz1
+Iz3iZbBZfXO>6R5g4>T]5Q0
 R2
 R0
-w1665607086
+w1665607184
 8C:/Users/ka266/Documents/Project3/dffe.v
 FC:/Users/ka266/Documents/Project3/dffe.v
 L0 1
@@ -53,7 +53,7 @@ R5
 R6
 R7
 vreg_32
-!s110 1665607164
+R1
 !i10b 1
 !s100 KLKEDeo8nGKeDJWA=UCWC1
 IdL]Um1HanE5h?E9bMdnea3
@@ -67,7 +67,7 @@ R3
 r1
 !s85 0
 31
-!s108 1665607164.000000
+R4
 !s107 C:/Users/ka266/Documents/Project3/reg_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/ka266/Documents/Project3|C:/Users/ka266/Documents/Project3/reg_32.v|
 !i113 1
@@ -77,11 +77,11 @@ R7
 vregfile
 R1
 !i10b 1
-!s100 XKO]?1lXzQL1nQl61DjOP2
-IWaVMjRfPQ3T;SWz>[MnjS3
+!s100 EKFMe6<AJjX]6I6fM<9H01
+IS4N<I@]H:l`Rgn[DP_<[82
 R2
 R0
-w1665605977
+w1665685234
 8C:/Users/ka266/Documents/Project3/regfile.v
 FC:/Users/ka266/Documents/Project3/regfile.v
 L0 1
@@ -99,11 +99,11 @@ R7
 vregfile_tb
 R1
 !i10b 1
-!s100 g7]XNV?YzH0j^;E<:ZNjh1
-IIic;A>cCef7Vj:lS3G=gK0
+!s100 Y<Ud_7EC^M[cRWoXX3aN12
+I6Qk6mYMVBzA@W7DZi?[BM2
 R2
 R0
-w1665606871
+w1665696342
 8C:/Users/ka266/Documents/Project3/regfile_tb.v
 FC:/Users/ka266/Documents/Project3/regfile_tb.v
 L0 3

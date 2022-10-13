@@ -43,6 +43,7 @@ module regfile_tb();
 	    end
         end
 		  
+		  ctrl_writeEn = 1'b0;
         ctrl_reset = 1'b1;    // assert reset
         @(negedge clock);    // wait until next negative edge of clock
         @(negedge clock);    // wait until next negative edge of clock
@@ -54,8 +55,33 @@ module regfile_tb();
 		  for(index = 0; index <= 31; index = index + 1) begin
 				checkRegister(index, 32'h0);
 		  end
+		 
+			$display("Checking write enable off");
 		  
+			ctrl_writeEn = 1'b0;
+			ctrl_reset = 1'b0;    // de-assert reset
+        @(posedge clock);    // wait until next negative edge of clock
+				  
+		  // Begin testing... (loop over registers)
+        for(index = 0; index <= 31; index = index + 1) begin
+            writeRegisternoenable(index, 32'h0000DEAD);
+			end
+				
+		  for(index = 0; index <= 31; index = index + 1) begin
+				checkRegister(index, 32'h0);
+		  end
 		  
+		  $display("Checking different write");
+		  
+		   for(index = 0; index <= 31; index = index + 1) begin
+            writeRegister(index, index);
+				end
+				
+		  for(index = 0; index <= 31; index = index + 1) begin
+				checkRegister(index, index);
+		  end
+		  
+
         if (errors == 0) begin
             $display("The simulation completed without errors");
         end
@@ -63,6 +89,8 @@ module regfile_tb();
             $display("The simulation failed with %d errors", errors);
         end
 
+
+		  
         $stop;
     end
 
@@ -88,6 +116,22 @@ module regfile_tb();
 
             @(negedge clock); // wait for next negedge, write should be done
             ctrl_writeEn = 1'b0;
+        end
+    endtask
+	 
+    // Task for writing
+    task writeRegisternoenable;
+
+        input [4:0] writeReg;
+        input [31:0] value;
+
+        begin
+            @(negedge clock);    // wait for next negedge of clock
+            $display($time, " << No enable Writing register %d with %h >>", writeReg, value);
+    
+				ctrl_writeReg = writeReg;
+            data_writeReg = value;
+
         end
     endtask
 
